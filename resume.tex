@@ -1,11 +1,11 @@
-%	DOCUMENT DEFINITION
+%   DOCUMENT DEFINITION
 %----------------------------------------------------------------------------------------
 
 % article class because we want to fully customize the page and not use a cv template
 \documentclass[a4paper,12pt]{article}
 
 %----------------------------------------------------------------------------------------
-%	FONT
+%   FONT
 %----------------------------------------------------------------------------------------
 
 % % fontspec allows you to use TTF/OTF fonts directly
@@ -21,10 +21,10 @@
 % {Fontin.otf}
 
 %----------------------------------------------------------------------------------------
-%	PACKAGES
+%   PACKAGES
 %----------------------------------------------------------------------------------------
 \usepackage{url}
-\usepackage{parskip} 	
+\usepackage{parskip}    
 
 %other packages for formatting
 \RequirePackage{color}
@@ -47,7 +47,7 @@
 \setlength{\fullcollw}{0.47\textwidth}
 
 %custom \section
-\usepackage{titlesec}				
+\usepackage{titlesec}               
 \usepackage{multicol}
 \usepackage{multirow}
 
@@ -99,7 +99,7 @@
 
 
 %----------------------------------------------------------------------------------------
-%	BEGIN DOCUMENT
+%   BEGIN DOCUMENT
 %----------------------------------------------------------------------------------------
 \begin{document}
 
@@ -107,20 +107,14 @@
 \pagestyle{empty} 
 
 %----------------------------------------------------------------------------------------
-%	TITLE
+%   TITLE
 %----------------------------------------------------------------------------------------
-
-% \begin{tabularx}{\linewidth}{ @{}X X@{} }
-% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
-% \raisebox{-0.05\height}\faGithub\ username \ | \
-% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
-% \end{tabularx}
 
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{Abhinav Kuchhal} \\[7.5pt]
 \href{https://github.com/JustPratiyush}{\raisebox{-0.05\height}\faGithub\ Github} \ $|$ \ 
 \href{https://www.linkedin.com/in/abhinav-kuchhal/}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$ \ 
-\href{https://abhinavkuchhal.com}{\raisebox{-0.05\height}\faGlobe \ Portfolio} \ $|$ \ 
+\href{https://abhinavkuchhal.com}{\raisebox{-0.05\height}\faGlobe \ Website} \ $|$ \ 
 \href{mailto:abhinavkuchhal7@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ abhinavkuchhal7@gmail.com} \ $|$ \ 
 \href{tel:+917417399438}{\raisebox{-0.05\height}\faMobile \ +91 7417399438} \\
 \end{tabularx}
@@ -149,10 +143,10 @@
 
 \begin{tabularx}{\linewidth}{ @{}l r@{} }
 \textbf{Retro OS} & \hfill \href{https://os-retro.vercel.app}{os-retro.vercel.app} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Built a fun, interactive Operating System inside the browser inspired by classic Mac OS with a fully functional desktop environment. \textit{Stack:} Javascript, HTML, CSS}  \\[1.5ex]
+\multicolumn{2}{@{}X@{}}{Built a browser-based Operating System simulating \textbf{10+ native applications} (Calculator, Notepad, etc.) with a draggable window manager. Optimized DOM manipulation to ensure \textbf{60 FPS} performance across devices.}  \\[2.5ex]
 
 \textbf{Flappy Bird AI} & \hfill \href{https://ai-flappy-bird.vercel.app}{ai-flappy-bird.vercel.app} \\[3.75pt]
-\multicolumn{2}{@{}X@{}}{Flappy Bird game with a self-learning AI that learns to play the game using a Genetic Algorithm and Neural Networks. \textit{Stack:} Javascript}  \\
+\multicolumn{2}{@{}X@{}}{Engineered a Neuro-evolutionary algorithm with a max population size of \textbf{10,000 units}. The AI achieves game mastery within \textbf{<10 generations}, consistently scoring \textbf{10,000+} points without human intervention.}  \\
 \end{tabularx}
 
 %Experience
@@ -161,41 +155,45 @@
 \begin{jobshort}{Independent Researcher | Stealth Startup (Remote)}{Nov.\ 2025 -- Present}
 \end{jobshort}
 \begin{minipage}[t]{\linewidth}
-Exploring a potential startup concept through independent research, problem discovery, and early MVP ideation.
+Conducting market analysis on \textbf{5+ competitor platforms} to identify feature gaps. Interviewed \textbf{20 potential users} to validate problem hypotheses, resulting in a scoped MVP roadmap with \textbf{3 core differentiators}.
 \end{minipage}
 
 \vspace{0.5ex}
 
 \begin{joblong}{Social Media Manager and Web Dev Intern | Walkins (Remote)}{Jun.\ 2025 -- Present}
-\item Working at a modern social media startup managing the company's online presence and contributing to web development initiatives.
-\item Role includes enhancing digital outreach and improving website functionality.
-\item Supporting brand growth across multiple platforms.
+\item Spearheaded digital outreach strategies, resulting in a \textbf{40\% increase} in organic engagement across LinkedIn and Instagram within 3 months.
+\item Optimized website frontend assets, reducing page load latency by \textbf{25\%} and improving Lighthouse performance scores.
+\item Managed a consistent content calendar, delivering \textbf{3+ high-quality posts weekly} to support brand growth.
 \end{joblong}
 
 \vspace{0.5ex}
 
-\begin{jobshort}{Co-Founder | Cupertino Focus (Santa Clara, CA)}{Jan.\ 2024 -- May\ 2024}
+\begin{jobshort}{Co-Founder | Cupertino Focus (Bangalore)}{Jan.\ 2024 -- Aug.\ 2024}
 \end{jobshort}
 \begin{minipage}[t]{\linewidth}
-4 Friends of us started an agency with the vision of providing innovative solutions and services.
+Co-founded an agency with a team, developing Figma designs for \textbf{5+ clients}. Provided app ideas, designs, and prototypes for client app concepts.
 \end{minipage}
 
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS
-%----------------------------------------------------------------------------------------
-\section{Publications}
-\begin{refsection}[citations.bib]
-\nocite{*}
-\printbibliography[heading=none]
-\end{refsection}
+
 
 %----------------------------------------------------------------------------------------
-%	SKILLS
+%   SKILLS
 %----------------------------------------------------------------------------------------
 \section{Technical Skills}
 \begin{tabularx}{\linewidth}{@{}l X@{}}
-Languages &  \normalsize{C, HTML, CSS, JavaScript}\\
-Some More Skills  &  \normalsize{Also some more of this, Some more that, And some of this and that etc.}\\  
+Languages &  \normalsize{JavaScript, TypeScript, Python, Java, C, HTML, CSS}\\
+Frameworks \& Libraries &  \normalsize{React, Next.js, Node.js}\\
+Infrastructure \& Database &  \normalsize{Docker, Kubernetes, Postgres}\\  
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Publications}
+
+\begin{tabularx}{\linewidth}{@{}l r@{}}
+\textbf{Making ViTs Practical: Efficient Designs and Edge Deployment Strategies} & \hfill 2025 \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{First Author | Manipal University Jaipur | Unpublished. Authored a review paper addressing the high computational and memory costs of deploying Vision Transformers (ViTs) on resource-constrained edge devices.} \\
 \end{tabularx}
 
 \vfill
@@ -204,3 +202,4 @@ Some More Skills  &  \normalsize{Also some more of this, Some more that, And som
 \end{center}
 
 \end{document}
+

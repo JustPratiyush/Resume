@@ -1,0 +1,213 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{enumitem}
+\setlist[itemize]{nosep, leftmargin=*, before=\vspace{-0.5em}, after=\vspace{0em}}
+
+% Redefine roundpic to be larger
+\renewcommand{\roundpic}[1]{\begin{tikzpicture}\clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{#1}};\end{tikzpicture}}
+
+% Command for vertical date layout
+\newcommand{\cvdate}[2]{%
+\parbox[t]{2.5cm}{\raggedleft #1\\[0.3em] \makebox[2.5cm][r]{\color{black!50}\rule{0.5pt}{1em}}\\[0.3em] #2}%
+}
+
+% Fix for cvevent spacing and structure
+\providecommand{\cvevent}[6]{}
+\renewcommand{\cvevent}[6]{{#1} & \textbf{#2}\newline\textsc{#3} \ifx\relax#4\relax\else $\cdot$ {#4 ~\faMapMarker} \fi\newline{\color{black!70}\footnotesize #5}\vspace{3em} & \ifx\relax#6\relax\else\raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}\fi}
+
+% Redefine infobubble to be left-aligned and cleaner
+\providecommand{\infobubble}[4]{}
+\renewcommand{\infobubble}[4]{
+	\begin{tabular}{@{} p{0.15\linewidth} @{} p{0.82\linewidth} @{}}
+		\centering\textcolor{cvgreen}{#1} & #4
+	\end{tabular}\\[0.2em]
+}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+% Color Definitions
+\definecolor{cvgreen}{HTML}{006400} % Dark Forest Green
+
+%------------------------------------------------------------------
+\title{Resume}
+\author{Abhinav Kuchhal}
+\date{\today}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue, linkcolor=blue}
+
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Abhinav}{Kuchhal}{Frontend Developer \& AI Engineer}{white}
+
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\raggedright
+\begin{center}
+    \roundpic{lala.png}
+\end{center}
+
+\bg{cvgreen}{white}{Contact}\\[0.5em]
+\infobubble{\faEnvelope}{cvgreen}{white}{\scalebox{0.75}{abhinavkuchhal7@gmail.com}}
+\infobubble{\faPhone}{cvgreen}{white}{+91 7417399438}
+\infobubble{\faGlobe}{cvgreen}{white}{\href{https://abhinavkuchhal.com}{\textcolor{blue}{My Website \& Blog}}}
+
+\infobubble{\faLinkedin}{cvgreen}{white}{\href{https://www.linkedin.com/in/abhinav-kuchhal/}{\textcolor{blue}{Linkedin Profile}}}
+
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/JustPratiyush}{\textcolor{blue}{Github Profile}}}
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Address}\\[0.5em]
+\textbf{Permanent:} \\
+Piyush Kuchhal \& Associates \\
+425/1, Basant Vihar \\
+Roorkee, Uttarakhand \\[0.5em]
+
+\textbf{Present:} \\
+Manipal University \\
+Dahmi Kalan \\
+Jaipur, Rajasthan
+
+\bigskip
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Summary}
+\parbox{\linewidth}{%
+    \color{black!70}
+    Frontend Engineer specializing in React and modern web technologies. I leverage cutting-edge AI tools to accelerate development and enhance productivity, while continuously expanding into full-stack development. Passionate about building fast, intuitive, and design-forward user experiences.
+}
+\vspace{3em}
+
+\section*{Work Experience}
+
+\begin{tabular}{r| p{0.48\textwidth} c}
+    \cvevent{\cvdate{Present}{Nov 2025}}{Independent Researcher}{Stealth Startup}{Remote}{
+    \begin{itemize}
+        \item Conducted market analysis across 5+ competitor platforms
+        \item Identified feature gaps
+        \item Interviewed 20 prospective users
+        \item Validated core problem statements
+        \item Shaped an MVP roadmap
+        \item Defined 3 key differentiators
+    \end{itemize}}{} \\
+    \cvevent{\cvdate{Aug 2025}{Jan 2025}}{Co-Founder}{Cupertino Focus}{Delhi}{
+    \begin{itemize}
+        \item Co-founded a product-focused agency
+        \item Delivered Figma-based designs and interactive prototypes
+        \item Worked with 5+ clients
+        \item Led ideation and UX flows
+        \item Performed early product validation for mobile applications
+    \end{itemize}}{}
+\end{tabular}
+\vspace{3em}
+
+\section*{Projects}
+
+\begin{tabular}{r| p{0.48\textwidth} c}
+    \cvevent{Web App}{Retro OS}{\href{https://os-retro.vercel.app}{\textcolor{blue}{Link}}}{}{
+    \begin{itemize}
+        \item Built a browser-based operating system
+        \item Simulates 10+ native applications (Calculator, Notepad, etc.)
+        \item Includes a draggable window manager
+        \item Optimized DOM operations
+        \item Maintains 60 FPS performance across devices
+    \end{itemize}}{} \\
+    \cvevent{Web App}{Flappy Bird AI}{\href{https://ai-flappy-bird.vercel.app}{\textcolor{blue}{Link}}}{}{
+    \begin{itemize}
+        \item Designed a neuro-evolutionary algorithm
+        \item Population size up to 10,000 agents
+        \item AI achieves mastery in less than 15 generations
+        \item Consistently scores 10,000+ points autonomously
+    \end{itemize}}{}
+\end{tabular}
+\vspace{3em}
+
+\section*{Technical Skills}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{Languages} & JavaScript, TypeScript, Python, Java, C, HTML, CSS \\
+     \bg{skilllabelcolour}{iconcolour}{Frameworks} & React, Next.js, Node.js \\
+     \bg{skilllabelcolour}{iconcolour}{Infrastructure} & Docker, Kubernetes, PostgreSQL \\
+\end{tabular}
+\vspace{3em}
+
+\section*{Publications}
+\begin{tabular}{r| p{0.48\textwidth} c}
+    \cvevent{Unpublished}{Making ViTs Practical}{First Author}{Manipal University}{
+    \textbf{Efficient Designs and Edge Deployment Strategies} \newline
+    Review paper. Focus: Reducing computational and memory overheads for deploying Vision Transformers (ViTs) on resource-constrained edge devices. \newline
+    \href{https://www.linkedin.com/feed/update/urn:li:activity:7404525421704380417/}{\textcolor{blue}{Certificate Link}}}{}
+\end{tabular}
+\vspace{3em}
+
+\section*{Education}
+\begin{tabular}{r| p{0.48\textwidth} c}
+    \cvevent{\cvdate{2023}{2027}}{B.Tech in Computer \& Communication Engineering}{Manipal University Jaipur}{CGPA: 7.71}{}{}
+\end{tabular}
+
+\vspace{3em}
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!50}
+{\small Last updated \today}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}

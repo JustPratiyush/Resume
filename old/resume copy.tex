@@ -1,0 +1,197 @@
+%   DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%   FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%   PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip}    
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}               
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+
+% job listing environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}    
+    }
+
+
+
+%----------------------------------------------------------------------------------------
+%   BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%   TITLE
+%----------------------------------------------------------------------------------------
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Abhinav Kuchhal} \\[7.5pt]
+\href{https://github.com/JustPratiyush}{\raisebox{-0.05\height}\faGithub\ Github} \ $|$ \ 
+\href{https://www.linkedin.com/in/abhinav-kuchhal/}{\raisebox{-0.05\height}\faLinkedin\ Linkedin} \ $|$ \ 
+\href{https://abhinavkuchhal.com}{\raisebox{-0.05\height}\faGlobe \ Website} \ $|$ \ 
+\href{mailto:abhinavkuchhal7@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ abhinavkuchhal7@gmail.com} \ $|$ \ 
+\href{tel:+917417399438}{\raisebox{-0.05\height}\faMobile \ +91 7417399438} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+\begin{tabularx}
+{\linewidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+\textbf{Manipal University Jaipur} & Sep.\ 2023 -- Jun.\ 2027 \\
+\textit{Bachelor of Technology in Computer \& Communication Engineering} & \textit{7.71 CGPA} \\[1.5ex]
+
+% Entry 2
+\textbf{Delhi Public School, Roorkee} & Apr.\ 2022 -- Mar.\ 2023 \\
+\textit{Class XII (CBSE)} & \textit{77.0\%} \\[1.5ex]
+
+% Entry 3
+\textbf{Wynberg-Allen School, Mussoorie} & Apr.\ 2020 -- Mar.\ 2021 \\
+\textit{Class X (ICSE)} & \textit{81.3\%} \\
+\end{tabularx}
+
+%Projects
+\section{Projects}
+
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Retro OS} & \hfill \href{https://os-retro.vercel.app}{os-retro.vercel.app} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Built a browser-based Operating System simulating \textbf{10+ native applications} (Calculator, Notepad, etc.) with a draggable window manager. Optimized DOM manipulation to ensure \textbf{60 FPS} performance across devices.}  \\[2.5ex]
+
+\textbf{Flappy Bird AI} & \hfill \href{https://ai-flappy-bird.vercel.app}{ai-flappy-bird.vercel.app} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Engineered a Neuro-evolutionary algorithm with a max population size of \textbf{10,000 units}. The AI achieves game mastery within \textbf{<10 generations}, consistently scoring \textbf{10,000+} points without human intervention.}  \\
+\end{tabularx}
+
+%Experience
+\section{Work Experience}
+
+\begin{jobshort}{Independent Researcher | Stealth Startup (Remote)}{Nov.\ 2025 -- Present}
+\end{jobshort}
+\begin{minipage}[t]{\linewidth}
+Conducting market analysis on \textbf{5+ competitor platforms} to identify feature gaps. Interviewed \textbf{20 potential users} to validate problem hypotheses, resulting in a scoped MVP roadmap with \textbf{3 core differentiators}.
+\end{minipage}
+
+\vspace{0.5ex}
+
+\begin{jobshort}{Co-Founder | Cupertino Focus (Bangalore)}{Jan.\ 2024 -- Aug.\ 2024}
+\end{jobshort}
+\begin{minipage}[t]{\linewidth}
+Co-founded an agency with a team, developing Figma designs for \textbf{5+ clients}. Provided app ideas, designs, and prototypes for client app concepts.
+\end{minipage}
+
+
+
+%----------------------------------------------------------------------------------------
+%   SKILLS
+%----------------------------------------------------------------------------------------
+\section{Technical Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Languages &  \normalsize{JavaScript, TypeScript, Python, Java, C, HTML, CSS}\\
+Frameworks \& Libraries &  \normalsize{React, Next.js, Node.js}\\
+Infrastructure \& Database &  \normalsize{Docker, Kubernetes, Postgres}\\  
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%   PUBLICATIONS
+%----------------------------------------------------------------------------------------
+\section{Publications}
+
+\begin{tabularx}{\linewidth}{@{}l r@{}}
+\textbf{Making ViTs Practical: Efficient Designs and Edge Deployment Strategies} & \hfill \href{https://www.linkedin.com/feed/update/urn:li:activity:7404525421704380417/?originTrackingId=%2FS0RwbuSweERuxP6nHk4ZQ%3D%3D}{Certificate} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{2025 | First Author | Manipal University Jaipur | Unpublished. Authored a review paper addressing the high computational and memory costs of deploying Vision Transformers (ViTs) on resource-constrained edge devices.} \\
+\end{tabularx}
+
+\vfill
+\begin{center}
+\footnotesize Last updated: \today
+\end{center}
+
+\end{document}
+
